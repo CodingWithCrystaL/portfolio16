@@ -6,7 +6,7 @@
     <title>Zenkai's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
         * {
@@ -46,7 +46,7 @@
         }
 
         body {
-            font-family: 'Space Mono', monospace;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: hsl(var(--background));
             color: hsl(var(--foreground));
             overflow-x: hidden;
@@ -96,6 +96,7 @@
             margin-left: auto;
             color: #888;
             font-size: 14px;
+            font-family: 'Courier New', monospace;
         }
 
         /* Particle Background */
@@ -215,6 +216,7 @@
             color: hsl(var(--muted-foreground));
             margin-bottom: 30px;
             animation: fadeInUp 1s ease-out 0.2s backwards;
+            font-weight: 500;
         }
 
         .bio {
@@ -224,19 +226,13 @@
             margin: 0 auto 40px;
             color: hsl(var(--foreground));
             animation: fadeInUp 1s ease-out 0.4s backwards;
-            min-height: 100px;
+            min-height: 120px;
         }
 
         /* Typed.js cursor styling */
         .typed-cursor {
             color: hsl(var(--accent));
             font-weight: 700;
-            animation: blink 0.7s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
         }
 
         @keyframes fadeInUp {
@@ -286,13 +282,13 @@
             color: hsl(var(--primary-foreground));
             border: none;
             border-radius: var(--radius);
-            font-family: 'Space Mono', monospace;
+            font-family: 'Inter', sans-serif;
             font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
             margin: 5px;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .btn:hover {
@@ -435,6 +431,7 @@
             border-radius: 12px;
             font-size: 0.85rem;
             margin: 3px;
+            font-weight: 500;
         }
 
         /* Contact */
@@ -451,6 +448,7 @@
             display: block;
             text-decoration: none;
             transition: all 0.3s;
+            font-weight: 600;
         }
 
         .contact-email:hover {
@@ -720,16 +718,19 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
 
     <script>
-        // Typing animation for bio
-        var typed = new Typed('#typed-text', {
-            strings: [
-                "Hello, I'm Zenkai, a professional bot developer specializing in modern digital solutions. I create reliable, scalable applications that help businesses grow and succeed online."
-            ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: false,
-            showCursor: true,
-            cursorChar: '|'
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Typing animation for bio
+            var typed = new Typed('#typed-text', {
+                strings: [
+                    "Hello, I'm Zenkai, a professional bot developer specializing in modern digital solutions. I create reliable, scalable applications that help businesses grow and succeed online."
+                ],
+                typeSpeed: 40,
+                backSpeed: 0,
+                loop: false,
+                showCursor: true,
+                cursorChar: '|'
+            });
         });
 
         // Create animated particles
